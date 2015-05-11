@@ -5,11 +5,8 @@ $(document).ready(function(){
 
   var game = ("", "", "", "", "", "", "", "", "");
 
-
-
-
-
-  // Event listener function
+// function to add an X or 0 in each slot
+$('.x0').append
   
 
 
