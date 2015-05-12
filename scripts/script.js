@@ -1,12 +1,21 @@
-console.log('lauren');
-
 $(document).ready(function(){
   console.log('pedro')
 
   var game = ("", "", "", "", "", "", "", "", "");
+  var equix = 'X';
+  var cero = 'O';
 
 // function to add an X or 0 in each slot
-$('.x0').append
+
+
+  function getClickInArray () {
+    
+  } //getClickInArray
+
+//Event listener  for the function getClickInArray
+  $('.slot').on("click", getClickInArray);
+
+
   
 
 
