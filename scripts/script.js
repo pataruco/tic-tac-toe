@@ -20,14 +20,8 @@ $(document).ready(function(){
     game[inputArray] = lastMove;
     console.log(game);
     alterPlayer();
-    if(checkWin("X") === true){
-      alert('X Wins');
-    }
-    if(checkWin("O") === true){
-      alert('O wins');
-    }
-    
-    // checkWin("X");
+    console.log("O" + checkWin("O"));
+    console.log("X" + checkWin("X"));
 
   } //getClickInArray
 
