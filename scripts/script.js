@@ -63,13 +63,15 @@ $(document).ready(function(){
   function showWinner () {
     // console.log('hello lauren');
     if (checkWin("O")) {
-      console.log('ploayer 0 wins');
       alert('Player O wins');
     }
     else if (checkWin("X")) {
-      console.log('ploayer X wins')
       alert('Player X wins');
     }
+    // else {
+    //   alert('Draw');
+    // }
+    
   }//showWinner
 
 
