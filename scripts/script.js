@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  console.log('pedro')
+  // console.log('pedro')
 
   /*Variables
   *************************************/
@@ -20,6 +20,15 @@ $(document).ready(function(){
     game[inputArray] = lastMove;
     console.log(game);
     alterPlayer();
+    if(checkWin("X") === true){
+      alert('X Wins');
+    }
+    if(checkWin("O") === true){
+      alert('O wins');
+    }
+    
+    // checkWin("X");
+
   } //getClickInArray
 
 
@@ -30,7 +39,7 @@ $(document).ready(function(){
 /*Function to alternate the player
 *********************************************/
   function alterPlayer () {
-    console.log('hello lauren');
+    // console.log('hello lauren');
     if(lastMove === 'X') {
       lastMove = 'O';
     }
@@ -40,21 +49,23 @@ $(document).ready(function(){
   } //alterPlayer
 /**********************************************/
 
-  /*function to check proof win
-  // ****************************************/
-  function checkWin () {
-    $.each(answers, function(index, element) {
-      if(game === element){
-        alert('win');
-      }
-      else {
-        alert('draw');
-      }
-      
-      // console.log(index, element);
+/*function to check proof win
+****************************************/
+  function checkWin (winnerPlayer) {
+   return answers.some(function(element, index) {
+    // console.log(">>>>>>"+element);
+      return element.every(function(value, position){
+        // console.log("______");
+        // console.log(game[value]);
+        // console.log(winnerPlayer);
+        // console.log((winnerPlayer === game[value]));
+        // console.log('array'+game);
+        return (winnerPlayer === game[value]);
+
+      });
     });
-    } //checkWin 
 
 
+}//checkWin 
 }) //document. ready
 
