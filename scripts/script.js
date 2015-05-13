@@ -16,6 +16,7 @@ $(document).ready(function(){
   Function to add an X or 0 in each slot
 **********************************************/
   function getClickInArray(e) {
+    $(e.currentTarget).off('click', getClickInArray);
     // console.log(e.currentTarget.id);
     // console.log(lastMove);
     var inputArray = (e.currentTarget.id);//<--- relate the click with the id 
@@ -95,6 +96,7 @@ $(document).ready(function(){
   Function to put the input on the board
 **********************************************/
   function inputBoard (e) {
+    $(e.currentTarget).off('click', inputBoard);
     $(e.currentTarget).text(lastMove);
   //$('.slot').append('<span class="x0">' + lastMove + '</span></li>');
   }//inputBoard 
