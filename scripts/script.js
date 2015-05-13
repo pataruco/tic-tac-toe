@@ -9,9 +9,9 @@ $(document).ready(function(){
 /*********************************************
   Event Listeners
 **********************************************/
+  $('.slot').on('click', inputBoard); //<-- Put an X or O inside the board
   $('.slot').on("click", getClickInArray); //<-- Get a input in an array
   $('.clear').on('click', clearGame); //<-- Clear the board and the array
-  $('.slot').on('click', inputBoard); //<-- Clear the board and the array 
 /*********************************************
   Function to add an X or 0 in each slot
 **********************************************/
@@ -86,16 +86,15 @@ $(document).ready(function(){
   function clearGame () {
     game = [null, null, null, null, null, null, null, null, null];
     lastMove = 'X';
-  }
+    // $('.slot').append('');
+  }//clearGame
 /*********************************************
   Function to put the input on the board
 **********************************************/
   function inputBoard (e) {
     $(e.currentTarget).append(lastMove);
-    
-  // $('.slot').append('<span class="x0">' + lastMove + '</span></li>');
-
-  }
+  //$('.slot').append('<span class="x0">' + lastMove + '</span></li>');
+  }//inputBoard 
 
 
 
