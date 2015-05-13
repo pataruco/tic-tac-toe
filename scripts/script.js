@@ -1,14 +1,14 @@
 $(document).ready(function(){
   // console.log('pedro')
-
-  /*Variables
-  *************************************/
+  /*********************************************
+  Variables
+  /*********************************************/
   var game = [null, null, null, null, null, null, null, null, null];
   var answers = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
   var lastMove = 'X';
-  
-// function to add an X or 0 in each slot
-/***************************************/
+/*********************************************
+ Function to add an X or 0 in each slot
+/*********************************************/
   function getClickInArray(e) {
     // console.log(e.currentTarget.id);
     // console.log(lastMove);
@@ -25,9 +25,8 @@ $(document).ready(function(){
 
 //Event listener  for the function getClickInArray
   $('.slot').on("click", getClickInArray);
-  /*********************************************/
-  
-/*Function to alternate the player
+/*********************************************
+ Function to alternate the player
 *********************************************/
   function alterPlayer () {
     if(lastMove === 'X') {
@@ -37,10 +36,9 @@ $(document).ready(function(){
       lastMove = 'X';
     }
   } //alterPlayer
-/**********************************************/
-
-/*function to check proof win
-****************************************/
+/***********************************************
+ Function to check proof win /
+************************************************/
   function checkWin (winnerPlayer) {
    return answers.some(function(element, index) {
     // console.log(">>>>>>"+element);
@@ -51,13 +49,12 @@ $(document).ready(function(){
         // console.log((winnerPlayer === game[value]));
         // console.log('array'+game);
         return (winnerPlayer === game[value]);
-
       });//elements.every
     });//answers.some
   }//checkWin 
-  /*****************************************/
-  /*function to show a winner
-  ******************************************/
+/*****************************************
+  Function to show a winner
+******************************************/
   function showWinner () {
     // console.log('hello lauren');
     if (checkWin("O")) {
@@ -66,13 +63,10 @@ $(document).ready(function(){
     else if (checkWin("X")) {
       alert('Player X wins');
     }
-    // else {
-    //   alert('Draw');
-    // }
   }//showWinner
-  /*****************************************
+/*****************************************
   Function to show a draw
-  *****************************************/
+*****************************************/
    function showDraw () {
       // console.log('hello lauren');
       var result = game.filter(function(move){
@@ -86,11 +80,15 @@ $(document).ready(function(){
   Function to clear the array
   *****************************************/
   function clearGame () {
-    return game = [null, null, null, null, null, null, null, null, null];
+    game = [null, null, null, null, null, null, null, null, null];
+    lastMove = 'X';
   }
-
   //Event listener  for the function getClickInArray
   $('.clear').on('click', clearGame);
+/*****************************************
+  Function to put the input on the board
+*****************************************/
+
 
 
 
