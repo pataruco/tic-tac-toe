@@ -21,9 +21,7 @@ $(document).ready(function(){
     console.log("X" + checkWin("X"));
     showWinner(); //<--- Show winner (if we have one)
     showDraw(); //<--- Show draw (if we have one)
-
   } //getClickInArray
-
 
 //Event listener  for the function getClickInArray
   $('.slot').on("click", getClickInArray);
@@ -76,20 +74,25 @@ $(document).ready(function(){
   Function to show a draw
   *****************************************/
    function showDraw () {
-      console.log('hello lauren');
+      // console.log('hello lauren');
       var result = game.filter(function(move){
         return move;
       });
       if(game.length === result.length){
         alert('draw');
         }
-      }//
-  // function showDraw (game) {
-  //   // console.log('hello lauren');
-  //  if (index < game.length) {
-  //     alert('Draw');
-  //   }
-  // }// showDraw
+      }//// showDraw
+  /*****************************************
+  Function to clear the array
+  *****************************************/
+  function clearGame () {
+    return game = [null, null, null, null, null, null, null, null, null];
+  }
+
+  //Event listener  for the function getClickInArray
+  $('.clear').on('click', clearGame);
+
+
 
 
 
