@@ -92,7 +92,7 @@ $(document).ready(function(){
   Function to put the input on the board
 **********************************************/
   function inputBoard (e) {
-    $(e.currentTarget).append(lastMove);
+    $(e.currentTarget).text(lastMove);
   //$('.slot').append('<span class="x0">' + lastMove + '</span></li>');
   }//inputBoard 
 
