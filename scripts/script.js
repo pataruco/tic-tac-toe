@@ -45,6 +45,7 @@ $(document).ready(function(){
   function checkWin (winnerPlayer) {
    return answers.some(function(element, index) {
     // console.log(">>>>>>"+element);
+      // debugger
       return element.every(function(value, position){
         // console.log("______");
         // console.log(game[value]);
@@ -90,9 +91,9 @@ $(document).ready(function(){
   Function to put the input on the board
 **********************************************/
   function inputBoard (e) {
-    // $('.x0').append(lastMove);
+    $(e.currentTarget).append(lastMove);
     
-  $('.slot').append('<span class="x0">' + lastMove + '</span></li>');
+  // $('.slot').append('<span class="x0">' + lastMove + '</span></li>');
 
   }
 
