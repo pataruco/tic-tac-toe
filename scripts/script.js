@@ -86,7 +86,7 @@ $(document).ready(function(){
   function clearGame () {
     game = [null, null, null, null, null, null, null, null, null];
     lastMove = 'X';
-    // $('.slot').append('');
+    $('.slot').text('');
   }//clearGame
 /*********************************************
   Function to put the input on the board
@@ -95,7 +95,6 @@ $(document).ready(function(){
     $(e.currentTarget).append(lastMove);
   //$('.slot').append('<span class="x0">' + lastMove + '</span></li>');
   }//inputBoard 
-
 
 
 
