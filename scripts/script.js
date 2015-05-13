@@ -1,14 +1,20 @@
 $(document).ready(function(){
   // console.log('pedro')
-  /*********************************************
+/*********************************************
   Variables
-  /*********************************************/
+*********************************************/
   var game = [null, null, null, null, null, null, null, null, null];
   var answers = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
   var lastMove = 'X';
 /*********************************************
- Function to add an X or 0 in each slot
-/*********************************************/
+  Event Listeners
+**********************************************/
+  $('.slot').on("click", getClickInArray); //<-- Get a input in an array
+  $('.clear').on('click', clearGame); //<-- Clear the board and the array
+  $('.slot').on('click', inputBoard); //<-- Clear the board and the array 
+/*********************************************
+  Function to add an X or 0 in each slot
+**********************************************/
   function getClickInArray(e) {
     // console.log(e.currentTarget.id);
     // console.log(lastMove);
@@ -22,12 +28,9 @@ $(document).ready(function(){
     showWinner(); //<--- Show winner (if we have one)
     showDraw(); //<--- Show draw (if we have one)
   } //getClickInArray
-
-//Event listener  for the function getClickInArray
-  $('.slot').on("click", getClickInArray);
 /*********************************************
- Function to alternate the player
-*********************************************/
+  Function to alternate the player
+**********************************************/
   function alterPlayer () {
     if(lastMove === 'X') {
       lastMove = 'O';
@@ -36,9 +39,9 @@ $(document).ready(function(){
       lastMove = 'X';
     }
   } //alterPlayer
-/***********************************************
- Function to check proof win /
-************************************************/
+/*********************************************
+  Function to check proof win 
+**********************************************/
   function checkWin (winnerPlayer) {
    return answers.some(function(element, index) {
     // console.log(">>>>>>"+element);
@@ -52,9 +55,9 @@ $(document).ready(function(){
       });//elements.every
     });//answers.some
   }//checkWin 
-/*****************************************
+/*********************************************
   Function to show a winner
-******************************************/
+**********************************************/
   function showWinner () {
     // console.log('hello lauren');
     if (checkWin("O")) {
@@ -64,9 +67,9 @@ $(document).ready(function(){
       alert('Player X wins');
     }
   }//showWinner
-/*****************************************
+/*********************************************
   Function to show a draw
-*****************************************/
+**********************************************/
    function showDraw () {
       // console.log('hello lauren');
       var result = game.filter(function(move){
@@ -76,19 +79,22 @@ $(document).ready(function(){
         alert('draw');
         }
       }//// showDraw
-  /*****************************************
+/*********************************************
   Function to clear the array
-  *****************************************/
+**********************************************/
   function clearGame () {
     game = [null, null, null, null, null, null, null, null, null];
     lastMove = 'X';
   }
-  //Event listener  for the function getClickInArray
-  $('.clear').on('click', clearGame);
-/*****************************************
+/*********************************************
   Function to put the input on the board
-*****************************************/
+**********************************************/
+  function inputBoard (e) {
+    // $('.x0').append(lastMove);
+    
+  $('.slot').append('<span class="x0">' + lastMove + '</span></li>');
 
+  }
 
 
 
