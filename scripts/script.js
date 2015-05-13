@@ -12,14 +12,15 @@ $(document).ready(function(){
   function getClickInArray(e) {
     // console.log(e.currentTarget.id);
     // console.log(lastMove);
-    var inputArray = (e.currentTarget.id);
+    var inputArray = (e.currentTarget.id);//<--- relate the click with the id 
     // checkWin();
-    game[inputArray] = lastMove;
+    game[inputArray] = lastMove;//<--- insert the value in the game array
     console.log(game);
-    alterPlayer();
+    alterPlayer(); //<--- alternate players
     console.log("O" + checkWin("O"));
     console.log("X" + checkWin("X"));
-    showWinner();
+    showWinner(); //<--- Show winner (if we have one)
+    showDraw(); //<--- Show draw (if we have one)
 
   } //getClickInArray
 
@@ -31,7 +32,6 @@ $(document).ready(function(){
 /*Function to alternate the player
 *********************************************/
   function alterPlayer () {
-    // console.log('hello lauren');
     if(lastMove === 'X') {
       lastMove = 'O';
     }
@@ -71,8 +71,26 @@ $(document).ready(function(){
     // else {
     //   alert('Draw');
     // }
-    
   }//showWinner
+  /*****************************************
+  Function to show a draw
+  *****************************************/
+   function showDraw () {
+      console.log('hello lauren');
+      var result = game.filter(function(move){
+        return move;
+      });
+      if(game.length === result.length){
+        alert('draw');
+        }
+      }//
+  // function showDraw (game) {
+  //   // console.log('hello lauren');
+  //  if (index < game.length) {
+  //     alert('Draw');
+  //   }
+  // }// showDraw
+
 
 
 
