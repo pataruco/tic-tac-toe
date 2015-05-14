@@ -37,12 +37,12 @@ p.title {
 /*Player*/
 /*********************************************/
 p.player {
-  display: block;
-  margin: auto;
-  margin-top: 3%;
+  display: inline-block;
+  margin-left: 40%;
+  /* margin-top: 0%; */
   width: 110px;
   height: 10px;
-  color: rgba(92, 98, 116, .85); 
+  color: rgba(92, 98, 116, .85);
   font-size: 45px;
   transform: rotate(10deg);
   -webkit-transform: rotate(10deg);
@@ -51,7 +51,7 @@ p.player {
 /*Player name*/
 /*********************************************/
 p.name {
-  display: block;
+  display: inline-block;
   margin: 0 auto;
   margin-top: 3%;
   height: 10px;
@@ -65,7 +65,10 @@ p.name {
 /*Cofee*/
 /*********************************************/
 .coffe {
+  display: inline-block;
   width: 200px;
+  margin-left: 25%;
+  margin-top: -10%;
 }
 
 /*********************************************/
