@@ -6,6 +6,8 @@ $(document).ready(function(){
   var game = [null, null, null, null, null, null, null, null, null];
   var answers = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
   var lastMove = 'X';
+  var counter_X = 0;
+  var counter_O = 0;
 /*********************************************
   Event Listeners
 **********************************************/
@@ -65,9 +67,13 @@ $(document).ready(function(){
   function showWinner () {
     // console.log('hello lauren');
     if (checkWin("O")) {
+      counter_O ++;
+      counterO(); 
       popWinnerO();
     }
     else if (checkWin("X")) {
+      counter_X ++;
+      counterX(); 
       popWinnerX();
     }
   }//showWinner
@@ -102,7 +108,6 @@ $(document).ready(function(){
   function inputBoard (e) {
     $(e.currentTarget).off('click', inputBoard);
     $(e.currentTarget).text(lastMove);
-  //$('.slot').append('<span class="x0">' + lastMove + '</span></li>');
   }//inputBoard 
 /*********************************************
   Function to pop up a winner O
@@ -112,7 +117,7 @@ $(document).ready(function(){
     $('.win').css("visibility", "visible");
   }
 /*********************************************
-  Function to pop up a winner O
+  Function to pop up a winner X
 **********************************************/
   function popWinnerX () {
     $('.winner').text('X');
@@ -121,9 +126,20 @@ $(document).ready(function(){
 /*********************************************
   Function to pop up a draw
 **********************************************/
-function popDraw () {
-  $('.draw').css("visibility", "visible");
-}
+  function popDraw () {
+    $('.draw').css("visibility", "visible");
+  }
+/*********************************************
+  Functions to show points
+**********************************************/
+  function counterX () {
+    $('.player_x').text(counter_X);    
+  }
+  function counterO () {
+    $('.player_o').text(counter_O);
+  }
+
+
 
 }) //document. ready
 

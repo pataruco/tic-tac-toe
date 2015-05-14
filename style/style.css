@@ -178,7 +178,6 @@ p.clear_board {
   transform: rotate(10deg);
   -webkit-transform: rotate(10deg);
 }
-
 /*********************************************/
 /*Draw pop-up*/
 /*********************************************/
@@ -202,10 +201,44 @@ p.clear_board {
   font-size: 80px;
   transform: rotate(-10deg);
   -webkit-transform: rotate(-10deg);
-
 }
-
-
-
-
-
+/*********************************************/
+/*Counter*/
+/*********************************************/
+.counter {
+  display: block;
+  /*border: 3px solid red;*/
+  width: 300px;
+  height: 200px;
+  margin-top: -20%;
+  margin-left: 1%;
+  -webkit-transform: rotate(4deg);
+}
+.counter_name {
+  display: block;
+  font-size: 30px;
+  color: rgba(0, 19, 98, .85);
+  margin-top: 1%;
+}
+.player_x_name{
+  font-size: 25px;
+  color: rgba(0, 19, 98, .85);
+  margin-left: -10%;
+  margin-top: -10%;
+}
+.player_x {
+  font-size: 25px;
+  margin-top: -10%;
+  margin-left: -20%;
+}
+.player_o_name{
+  font-size: 25px;
+  color: rgba(0, 19, 98, .85);
+  margin-left: -10%;
+  margin-top: -21%;
+}
+.player_o {
+  font-size: 25px;
+  margin-top: -21%;
+  margin-left: -20%;
+}
