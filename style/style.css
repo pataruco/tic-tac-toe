@@ -56,7 +56,9 @@ p.name {
   width: 306px;
   margin: 0 auto;
   margin-top: 3%;
-  display: block;
+  /* display: block; */
+  display: inline-block;
+  margin-left: 25%;
 }
 
 li {
@@ -91,10 +93,13 @@ li {
 }
 
 /*Clear button*/
+.eraser {
+  display: inline-block;
+  margin-left: 20%;
+}
+
 .clear {
-  display: block;
-  width: 125px;
-  margin-left: 80%;
+  width: 175px;
 }
 
 
