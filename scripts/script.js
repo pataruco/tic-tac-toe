@@ -80,11 +80,11 @@ $(document).ready(function(){
         return move;
       });
       if(game.length === result.length){
-        alert('draw');
+        popDraw();
         }
       }//// showDraw
 /*********************************************
-  Function to clear the array, board, player, winner
+  Function to clear the array, board, player, winner & draw
 **********************************************/
   function clearGame () {
     game = [null, null, null, null, null, null, null, null, null];
@@ -94,6 +94,7 @@ $(document).ready(function(){
     $('.slot').on('click', inputBoard); 
     $('.slot').on("click", getClickInArray);
     $('.win').css("visibility", "hidden");
+    $('.draw').css("visibility", "hidden");
   }//clearGame
 /*********************************************
   Function to put the input on the board
@@ -106,17 +107,22 @@ $(document).ready(function(){
 /*********************************************
   Function to pop up a winner O
 **********************************************/
-function popWinnerO () {
-  $('.winner').text('O');
-  $('.win').css("visibility", "visible");
-}
-
+  function popWinnerO () {
+    $('.winner').text('O');
+    $('.win').css("visibility", "visible");
+  }
 /*********************************************
   Function to pop up a winner O
 **********************************************/
-function popWinnerX () {
-  $('.winner').text('X');
-  $('.win').css("visibility", "visible");
+  function popWinnerX () {
+    $('.winner').text('X');
+    $('.win').css("visibility", "visible");
+  }
+/*********************************************
+  Function to pop up a draw
+**********************************************/
+function popDraw () {
+  $('.draw').css("visibility", "visible");
 }
 
 }) //document. ready
