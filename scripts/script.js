@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  // console.log('pedro')
 /*********************************************
   Variables
 *********************************************/
@@ -37,11 +36,11 @@ $(document).ready(function(){
   function alterPlayer () {
     if(lastMove === 'X') {
       lastMove = 'O';
-      $('.name').text('O');
+      $('.name').text('O'); //<--- Alternate with O
     }
     else {
       lastMove = 'X';
-      $('.name').text('X');
+      $('.name').text('X'); //<--- Alternate with X
     }
   } //alterPlayer
 /*********************************************
@@ -67,14 +66,14 @@ $(document).ready(function(){
   function showWinner () {
     // console.log('hello lauren');
     if (checkWin("O")) {
-      counter_O ++;
-      counterO(); 
-      popWinnerO();
+      counter_O ++; //<--- Add +1 to the counter variable
+      counterO(); //<--- Add +1 to the counter display
+      popWinnerO(); //<--- Show O as winner
     }
     else if (checkWin("X")) {
-      counter_X ++;
-      counterX(); 
-      popWinnerX();
+      counter_X ++; //<--- Add +1 to the counter variable
+      counterX(); //<--- Add +1 to the counter display
+      popWinnerX(); //<--- Show X as winner
     }
   }//showWinner
 /*********************************************
@@ -86,21 +85,21 @@ $(document).ready(function(){
         return move;
       });
       if(game.length === result.length){
-        popDraw();
+        popDraw(); //<--- Show pop up draw
         }
       }//// showDraw
 /*********************************************
   Function to clear the array, board, player, winner & draw
 **********************************************/
   function clearGame () {
-    game = [null, null, null, null, null, null, null, null, null];
+    game = [null, null, null, null, null, null, null, null, null]; //<--- Clear variable
     lastMove = 'X';
-    $('.slot').text('');
-    $('.name').text(lastMove);
-    $('.slot').on('click', inputBoard); 
-    $('.slot').on("click", getClickInArray);
-    $('.win').css("visibility", "hidden");
-    $('.draw').css("visibility", "hidden");
+    $('.slot').text(''); //<--- Clear all board display
+    $('.name').text(lastMove); //<--- Clear the next move player
+    $('.slot').on('click', inputBoard); //<--- Enable again the clicks
+    $('.slot').on("click", getClickInArray); //<--- Enable again the clicks
+    $('.win').css("visibility", "hidden"); //<--- Clear the win pop up
+    $('.draw').css("visibility", "hidden"); //<--- Clear the win pop up
   }//clearGame
 /*********************************************
   Function to put the input on the board
@@ -138,9 +137,6 @@ $(document).ready(function(){
   function counterO () {
     $('.player_o').text(counter_O);
   }
-
-
-
 }) //document. ready
 
 
