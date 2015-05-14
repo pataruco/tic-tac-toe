@@ -13,11 +13,12 @@ $(document).ready(function(){
   $('.slot').on('click', inputBoard); //<-- Put an X or O inside the board
   $('.slot').on("click", getClickInArray); //<-- Get a input in an array
   $('.clear').on('click', clearGame); //<-- Clear the board and the array
+  // $(document).on('keypress', function(e) //<-- Konami code
 /*********************************************
   Function to add an X or 0 in each slot
 **********************************************/
   function getClickInArray(e) {
-    $(e.currentTarget).off('click', getClickInArray);
+    $(e.currentTarget).off('click', getClickInArray); //<--- disable the slot
     // console.log(e.currentTarget.id);
     // console.log(lastMove);
     var inputArray = (e.currentTarget.id);//<--- relate the click with the id 
