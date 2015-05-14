@@ -94,6 +94,7 @@ $(document).ready(function(){
 **********************************************/
   function clearGame () {
     game = [null, null, null, null, null, null, null, null, null]; //<--- Clear variable
+    answers = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]; //<--- Set answer to default value
     lastMove = 'X';
     $('.slot').text(''); //<--- Clear all board display
     $('.name').text(lastMove); //<--- Clear the next move player
