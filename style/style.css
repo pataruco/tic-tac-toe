@@ -11,6 +11,7 @@ body {
 
 p.title {
   display: inline-block;
+  color: rgba(0, 19, 98, .85);
   text-align: center;
   font-size: 45px;
   transform: rotate(-15deg);
@@ -19,6 +20,7 @@ p.title {
 
 p.player {
   display: inline-block;
+  color: rgba(0, 19, 98, .85);
   font-size: 45px;
   text-align: center;
   vertical-align: top;
@@ -28,6 +30,7 @@ p.player {
 
 p.name {
   display: inline-block;
+  color: rgba(92, 98, 116, .85);
   font-size: 40px;
   text-align: center;
   vertical-align: top;
@@ -47,23 +50,23 @@ li {
 }
 
 .center-box {
-  border: 3px solid rgba(92, 98, 116, .85);;
+  border: 3px solid rgba(0, 19, 98, .85);
 }
 .left-center-box {
-  border-top: 3px solid rgba(92, 98, 116, .85);;
-  border-bottom: 3px solid rgba(92, 98, 116, .85);
+  border-top: 3px solid rgba(0, 19, 98, .85);
+  border-bottom: 3px solid rgba(0, 19, 98, .85);
 }
 .right-center-box {
-  border-top: 3px solid rgba(92, 98, 116, .85);;
-  border-bottom: 3px solid rgba(92, 98, 116, .85);;
+  border-top: 3px solid rgba(0, 19, 98, .85);
+  border-bottom: 3px solid rgba(0, 19, 98, .85);
 }
  .top-center-box {
-  border-right: 3px solid rgba(92, 98, 116, .85);;
-  border-left: 3px solid rgba(92, 98, 116, .85);;
+  border-right: 3px solid rgba(0, 19, 98, .85);
+  border-left: 3px solid rgba(0, 19, 98, .85);
 }
 .bottom-center-box{
-  border-right: 3px solid rgba(92, 98, 116, .85);;
-  border-left: 3px solid rgba(92, 98, 116, .85);;
+  border-right: 3px solid rgba(0, 19, 98, .85);
+  border-left: 3px solid rgba(0, 19, 98, .85);
 }
 
 
