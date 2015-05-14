@@ -157,7 +157,6 @@ p.clear_board {
   transform: rotate(-10deg);
   -webkit-transform: rotate(11deg);
   margin-left: 1%;
-
 }
 /*********************************************/
 /*Winner pop-up*/
