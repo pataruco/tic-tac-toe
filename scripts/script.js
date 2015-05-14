@@ -65,10 +65,10 @@ $(document).ready(function(){
   function showWinner () {
     // console.log('hello lauren');
     if (checkWin("O")) {
-      alert('Player O wins');
+      popWinnerO();
     }
     else if (checkWin("X")) {
-      alert('Player X wins');
+      popWinnerX();
     }
   }//showWinner
 /*********************************************
@@ -102,6 +102,21 @@ $(document).ready(function(){
     $(e.currentTarget).text(lastMove);
   //$('.slot').append('<span class="x0">' + lastMove + '</span></li>');
   }//inputBoard 
+/*********************************************
+  Function to pop up a winner O
+**********************************************/
+function popWinnerO () {
+  $('.winner').text('O');
+  $('.win').css("visibility", "visible");
+}
+
+/*********************************************
+  Function to pop up a winner O
+**********************************************/
+function popWinnerX () {
+  $('.winner').text('X');
+  $('.win').css("visibility", "visible");
+}
 
 }) //document. ready
 

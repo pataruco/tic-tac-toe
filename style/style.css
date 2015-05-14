@@ -1,4 +1,5 @@
 
+/*body */
 body {
   font-family: 'Patrick Hand SC', cursive;
   background-color: #fff; 
@@ -8,8 +9,8 @@ body {
   background-size: 100% 1.2em;
   color: rgba(92, 98, 116, .85);
 }
-
-/*Tittle*/
+/*********************************************/
+/*Title*/
 p.title {
   display: block;
   margin: 0px;
@@ -20,7 +21,7 @@ p.title {
   transform: rotate(-10deg);
   -webkit-transform: rotate(-10deg); /* Safari */
 }
-
+/*********************************************/
 /*Player*/
 p.player {
   display: block;
@@ -33,7 +34,7 @@ p.player {
   transform: rotate(10deg);
   -webkit-transform: rotate(10deg);
   }
-
+/*********************************************/
 /*Player name*/
 p.name {
   display: block;
@@ -46,9 +47,7 @@ p.name {
   transform: rotate(10deg);
   -webkit-transform: rotate(10deg);
 }
-
-
-
+/*********************************************/
 /*Hash board*/
 .hash {
   transform: rotate(-10deg);
@@ -91,7 +90,7 @@ li {
   border-right: 3px solid rgba(0, 19, 98, .85);
   border-left: 3px solid rgba(0, 19, 98, .85);
 }
-
+/*********************************************/
 /*Clear button*/
 .eraser {
   display: inline-block;
@@ -101,6 +100,19 @@ li {
 .clear {
   width: 175px;
 }
+/*********************************************/
+/*Winner pop-up*/
+.win {
+  width: 500px;
+  height: 350px;
+  position: absolute;
+  border: 3px solid red;
+  z-index: +1;
+  top: 57%;
+  left: 18%;
+  visibility: hidden;
+}
+
 
 
 
