@@ -84,7 +84,7 @@ $(document).ready(function(){
         }
       }//// showDraw
 /*********************************************
-  Function to clear the array, board & player
+  Function to clear the array, board, player, winner
 **********************************************/
   function clearGame () {
     game = [null, null, null, null, null, null, null, null, null];
@@ -93,6 +93,7 @@ $(document).ready(function(){
     $('.name').text(lastMove);
     $('.slot').on('click', inputBoard); 
     $('.slot').on("click", getClickInArray);
+    $('.win').css("visibility", "hidden");
   }//clearGame
 /*********************************************
   Function to put the input on the board
