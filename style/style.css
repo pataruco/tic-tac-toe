@@ -15,7 +15,7 @@ body {
 /*Title*/
 /*********************************************/
 p.title {
-  display: block;
+  display: inline-block;
   margin: 0px;
   width: 500px;
   height: 40px;
@@ -24,6 +24,17 @@ p.title {
   transform: rotate(-10deg);
   -webkit-transform: rotate(-10deg); /* Safari */
 }
+/*********************************************/
+/*Pencil*/
+/*********************************************/
+.pencil {
+  display: inline-block;
+  width: 400px;
+  transform: rotate(-101deg);
+  -webkit-transform: rotate(-101deg);
+
+}
+
 /*********************************************/
 /*Player*/
 /*********************************************/
