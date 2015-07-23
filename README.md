@@ -37,3 +37,7 @@ I solved the JS. I thought the CSS would be easy… but It wasn’t. In my previ
 When the teachers explained the task of Tic Tac Toe, my first thought was this will be a piece of paper from my school days, so my approach of styling was to replicate that.
 
 I hope you enjoy it as much as I do.
+
+## Take a look
+
+![](http://pataruco.s3.amazonaws.com/ga/tic-tac-toe/tic-tac-toe-screen.png)
